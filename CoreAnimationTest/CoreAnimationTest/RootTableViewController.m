@@ -8,6 +8,8 @@
 
 #import "RootTableViewController.h"
 #import "BasicAnimationViewController.h"
+#import "TableViewControllerForTestInsturctMent.h"
+#import "CG_VS_CA.h"
 
 #define NUMBEROFROWS 60
 
@@ -29,11 +31,11 @@
 //要显示的时候loadView方法将被再次调用来创建一个新的view。
 //Don't read self.view in -loadView. Only set it, don't get it.
 //The self.view property accessor calls -loadView if the view isn't currently loaded. There's your infinite recursion
--(void)loadView{
-    UIView *view = [ [ UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]] ;
-    [ view setBackgroundColor:[UIColor whiteColor]] ;
-    self.view = view;
-}
+//-(void)loadView{
+//    UIView *view = [ [ UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]] ;
+//    [ view setBackgroundColor:[UIColor whiteColor]] ;
+//    self.view = view;
+//}
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return NUMBEROFROWS;
@@ -49,6 +51,10 @@
     switch (indexPath.row) {
         case 0:
             cell.textLabel.text = @"BAsicAnimation";
+            break;
+        
+        case 1:
+            cell.textLabel.text = @"InstructMentTest";
             break;
             
         default:
@@ -69,8 +75,28 @@
         }
             break;
             
+        case 1:
+        {
+            TableViewControllerForTestInsturctMent *tableViewInstruct = [[TableViewControllerForTestInsturctMent alloc] init];
+            [self.navigationController pushViewController:tableViewInstruct animated:YES];
+        }
+            break;
+            
+        case 2:
+        {
+            CG_VS_CA *cgvscaView = [[CG_VS_CA alloc] initWithFrame:self.view.bounds];
+            cgvscaView.backgroundColor = [UIColor whiteColor];
+            [self.view addSubview:cgvscaView];
+        }
+            break;
+        
         default:
             break;
     }
 }
+
+-(void)buttonPressed:(id)sender{
+    NSLog(@"good job");
+}
+
 @end

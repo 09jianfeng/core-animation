@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E200B8A1C2926470092D466 /* TableViewControllerForTestInsturctMent.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E200B891C2926470092D466 /* TableViewControllerForTestInsturctMent.m */; };
+		2E200B911C295C7C0092D466 /* CG_VS_CA.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E200B901C295C7C0092D466 /* CG_VS_CA.m */; };
 		2E62FC4A1C281EA600396CBC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E62FC491C281EA600396CBC /* main.m */; };
 		2E62FC4D1C281EA600396CBC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E62FC4C1C281EA600396CBC /* AppDelegate.m */; };
 		2E62FC531C281EA600396CBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E62FC511C281EA600396CBC /* Main.storyboard */; };
@@ -21,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E200B881C2926470092D466 /* TableViewControllerForTestInsturctMent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerForTestInsturctMent.h; sourceTree = "<group>"; };
+		2E200B891C2926470092D466 /* TableViewControllerForTestInsturctMent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerForTestInsturctMent.m; sourceTree = "<group>"; };
+		2E200B8F1C295C7C0092D466 /* CG_VS_CA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CG_VS_CA.h; sourceTree = "<group>"; };
+		2E200B901C295C7C0092D466 /* CG_VS_CA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CG_VS_CA.m; sourceTree = "<group>"; };
 		2E62FC451C281EA600396CBC /* CoreAnimationTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreAnimationTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E62FC491C281EA600396CBC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2E62FC4B1C281EA600396CBC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +59,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E200B871C29261D0092D466 /* InstructMentTest */ = {
+			isa = PBXGroup;
+			children = (
+				2E200B881C2926470092D466 /* TableViewControllerForTestInsturctMent.h */,
+				2E200B891C2926470092D466 /* TableViewControllerForTestInsturctMent.m */,
+			);
+			path = InstructMentTest;
+			sourceTree = SOURCE_ROOT;
+		};
+		2E200B8E1C295C7C0092D466 /* codePerform */ = {
+			isa = PBXGroup;
+			children = (
+				2E200B8F1C295C7C0092D466 /* CG_VS_CA.h */,
+				2E200B901C295C7C0092D466 /* CG_VS_CA.m */,
+			);
+			path = codePerform;
+			sourceTree = SOURCE_ROOT;
+		};
 		2E62FC3C1C281EA600396CBC = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +96,8 @@
 		2E62FC471C281EA600396CBC /* CoreAnimationTest */ = {
 			isa = PBXGroup;
 			children = (
+				2E200B8E1C295C7C0092D466 /* codePerform */,
+				2E200B871C29261D0092D466 /* InstructMentTest */,
 				2E62FC5F1C28201700396CBC /* BasicAnimation */,
 				2E62FC621C28201700396CBC /* CATransform */,
 				2E62FC651C28201700396CBC /* corner_shadow */,
@@ -215,7 +241,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E62FC711C28201700396CBC /* ResponseChainView.m in Sources */,
+				2E200B8A1C2926470092D466 /* TableViewControllerForTestInsturctMent.m in Sources */,
 				2E62FC6E1C28201700396CBC /* CATransform3DForTestController.m in Sources */,
+				2E200B911C295C7C0092D466 /* CG_VS_CA.m in Sources */,
 				2E62FC4D1C281EA600396CBC /* AppDelegate.m in Sources */,
 				2E62FC6F1C28201700396CBC /* LayerCornerOrShadow.m in Sources */,
 				2E62FC6D1C28201700396CBC /* BasicAnimationViewController.m in Sources */,
@@ -369,6 +397,7 @@
 				2E62FC5E1C281EA600396CBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

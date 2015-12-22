@@ -94,7 +94,7 @@
 
 
 #pragma mark - 绘画圆角效果的优化方案
--(void)bestPerformToSetCorner{
+-(void)bestPerformToSetCorner:(UIImageView *)imageView{
     //-----------方案一
     //http://stackoverflow.com/questions/11049016/cliptobounds-and-maskstobounds-performance-issue  github地址
 //    view.layer.shouldRasterize = YES; 光栅化视图，会被分配一个缓存。不至于说每次都是重新粉刷
@@ -103,24 +103,20 @@
     //-----------方案二
     //http://stackoverflow.com/questions/17593524/using-cornerradius-on-a-uiimageview-in-a-uitableviewcell
     //或者，直接转换UIImage，用贝塞尔曲线
-//    // Get your image somehow
-//    UIImage *image = [UIImage imageNamed:@"image.jpg"];
-//    
-//    // Begin a new image that will be the new image with the rounded corners
-//    // (here with the size of an UIImageView)
-//    UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, NO, 1.0);
-//    
-//    // Add a clip before drawing anything, in the shape of an rounded rect
-//    [[UIBezierPath bezierPathWithRoundedRect:imageView.bounds
-//                                cornerRadius:10.0] addClip];
-//    // Draw your image
-//    [image drawInRect:imageView.bounds];
-//    
-//    // Get the image, here setting the UIImageView image
-//    imageView.image = UIGraphicsGetImageFromCurrentImageContext();
-//    
-//    // Lets forget about that we were drawing
-//    UIGraphicsEndImageContext();
+    // Get your image somehow
+    UIImage *image = [UIImage imageNamed:@"suolong.jpg"];
+    // Begin a new image that will be the new image with the rounded corners
+    // (here with the size of an UIImageView)
+    UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, NO, 1.0);
+    // Add a clip before drawing anything, in the shape of an rounded rect
+    [[UIBezierPath bezierPathWithRoundedRect:imageView.bounds
+                                cornerRadius:10.0] addClip];
+    // Draw your image
+    [image drawInRect:imageView.bounds];
+    // Get the image, here setting the UIImageView image
+    imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+    // Lets forget about that we were drawing
+    UIGraphicsEndImageContext();
 }
 
 #pragma mark - 阴影效果的优化方案
@@ -131,7 +127,7 @@
  
  如果是一个矩形或者是圆，用CGPath会相当简单明了。但是如果是更加复杂一点的图形，UIBezierPath类会更合适，它是一个由UIKit提供的在CGPath基础上的Objective-C包装类。
  */
-- (void) bestPerforToSetCorner:(UIView *)fatherView{
+- (void) bestPerformToSetShadow:(UIView *)fatherView{
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(50, 50, 100, 100)];
     view.layer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"suolong.jpg"].CGImage);
     [fatherView addSubview:view];
