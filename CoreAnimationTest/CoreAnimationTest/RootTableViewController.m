@@ -95,8 +95,15 @@
     }
 }
 
--(void)buttonPressed:(id)sender{
-    NSLog(@"good job");
+//UIScrollView重载了hitTest方法，当手指touch的时候，UIScrollView会拦截所有event,然后等待150ms，在这段时间内，如果没有手指没有移动，当时间结束时，UIScrollView会发送tracking event到子视图上，并且自身不滑动。在时间结束前，手指发生了移动，那么UIScrollView就会进行滑动，从而取消发送tracking。
+#pragma mark - 触摸事件
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    NSLog(@"rootViewTableView 触摸开始");
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"rootViewTableView 触摸结束");
 }
 
 @end
