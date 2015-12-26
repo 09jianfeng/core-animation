@@ -42,4 +42,12 @@ CoreAnimationTest 练习例子
 ## [离屏渲染](id:anchor3)
  设置圆角、阴影等会导致离屏渲染。
  
- 
+## +imageNamed: 与 +imageWithContentsOfFile: 的区别
+
+```
+1、+imageNamed加载的图片会缓存起来，适合用与要多次使用的图片。+imageWithContentsOfFile: 每次都会生成一块内存用来存储图片。
+2、图片都是有压缩的，png图片文件大但是解码快，jpeg文件小但是解码慢。iOS通常会延迟解压图片的时间，一般是等到加载到内存之后。这就会在准备绘制图片的时候影响性能，因为需要在绘制之前进行解压。 +imageNamed：方法避免延时解压。+imageWithContentsOfFile:会有延时解压
+3、+imageNamed:只对从应用资源束中的图片有效
+```
+
+## 

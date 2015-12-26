@@ -5,6 +5,40 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
+        <!--ImageIO Collection View-->
+        <scene sceneID="FFy-Jq-fQ3">
+            <objects>
+                <collectionViewController storyboardIdentifier="ImageIOCollectionView" modalTransitionStyle="flipHorizontal" id="uAF-eT-5HT" customClass="ImageIOCollectionView" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="gU4-qX-eN5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GAD-1Z-wOZ">
+                            <size key="itemSize" width="537" height="356"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ghY-Kv-eJQ">
+                                <rect key="frame" x="0.0" y="122" width="537" height="356"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="537" height="356"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="uAF-eT-5HT" id="8x9-40-UCE"/>
+                            <outlet property="delegate" destination="uAF-eT-5HT" id="qDa-6F-css"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H5D-dZ-L6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-60" y="994"/>
+        </scene>
         <!--Root View Controller-->
         <scene sceneID="SZs-1V-oxT">
             <objects>
@@ -32,7 +66,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aJX-hf-2Nn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="381" y="736"/>
+            <point key="canvasLocation" x="391" y="246"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Si2-jm-8sr">
@@ -48,7 +82,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="biA-DJ-IKM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-415" y="736"/>
+            <point key="canvasLocation" x="-471" y="246"/>
         </scene>
     </scenes>
 </document>

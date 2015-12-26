@@ -10,6 +10,7 @@
 #import "BasicAnimationViewController.h"
 #import "TableViewControllerForTestInsturctMent.h"
 #import "CG_VS_CA_bestPerform.h"
+#import "ImageIOCollectionView.h"
 
 #define NUMBEROFROWS 60
 
@@ -60,6 +61,9 @@
         case 2:
             cell.textLabel.text = @"CG_VS_CA";
             break;
+        case 3:
+            cell.textLabel.text = @"image_IO";
+            break;
             
         default:
             cell.textLabel.text = @"";
@@ -94,6 +98,14 @@
         }
             break;
         
+        case 3:
+        {
+            UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//            UICollectionViewLayout *collectionViewLayout = [[UICollectionViewLayout alloc] init];
+            ImageIOCollectionView *controller = [mainStoryboard instantiateViewControllerWithIdentifier:@"ImageIOCollectionView"];
+            [self.navigationController pushViewController:controller animated:YES];
+        }
+            
         default:
             break;
     }
