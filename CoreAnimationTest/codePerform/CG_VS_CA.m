@@ -13,36 +13,13 @@
 @end
 
 @implementation CG_VS_CA
+
 - (void)drawRect:(CGRect)rect
 {
     //draw path
     [[UIColor clearColor] setFill];
     [[UIColor redColor] setStroke];
     [self.path stroke];
-}
-
-- (id)init{
-    self = [super init];
-    if (self) {
-        //create a mutable path
-        self.path = [[UIBezierPath alloc] init];
-        self.path.lineJoinStyle = kCGLineJoinRound;
-        self.path.lineCapStyle = kCGLineCapRound;
-        self.path.lineWidth = 5;
-    }
-    return self;
-}
-
-- (id)initWithCoder:(NSCoder *)aDecoder{
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        //create a mutable path
-        self.path = [[UIBezierPath alloc] init];
-        self.path.lineJoinStyle = kCGLineJoinRound;
-        self.path.lineCapStyle = kCGLineCapRound;
-        self.path.lineWidth = 5;
-    }
-    return self;
 }
 
 - (id)initWithFrame:(CGRect)frame{

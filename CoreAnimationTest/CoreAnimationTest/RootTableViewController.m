@@ -9,7 +9,7 @@
 #import "RootTableViewController.h"
 #import "BasicAnimationViewController.h"
 #import "TableViewControllerForTestInsturctMent.h"
-#import "CG_VS_CA.h"
+#import "CG_VS_CA_bestPerform.h"
 
 #define NUMBEROFROWS 60
 
@@ -56,6 +56,10 @@
         case 1:
             cell.textLabel.text = @"InstructMentTest";
             break;
+        
+        case 2:
+            cell.textLabel.text = @"CG_VS_CA";
+            break;
             
         default:
             cell.textLabel.text = @"";
@@ -84,7 +88,7 @@
             
         case 2:
         {
-            CG_VS_CA *cgvscaView = [[CG_VS_CA alloc] initWithFrame:self.view.bounds];
+            CG_VS_CA_bestPerform *cgvscaView = [[CG_VS_CA_bestPerform alloc] initWithFrame:self.view.bounds];
             cgvscaView.backgroundColor = [UIColor whiteColor];
             [self.view addSubview:cgvscaView];
         }

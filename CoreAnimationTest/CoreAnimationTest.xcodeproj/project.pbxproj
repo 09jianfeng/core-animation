@@ -20,6 +20,8 @@
 		2E62FC701C28201700396CBC /* suolong.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2E62FC691C28201700396CBC /* suolong.jpg */; };
 		2E62FC711C28201700396CBC /* ResponseChainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E62FC6C1C28201700396CBC /* ResponseChainView.m */; };
 		2E62FC741C28213000396CBC /* RootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E62FC731C28213000396CBC /* RootTableViewController.m */; };
+		2E69A37B1C2A79E60096D4B7 /* CG_VS_CA_perfromBetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E69A37A1C2A79E60096D4B7 /* CG_VS_CA_perfromBetter.m */; };
+		2E69A37E1C2A80500096D4B7 /* CG_VS_CA_bestPerform.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E69A37D1C2A80500096D4B7 /* CG_VS_CA_bestPerform.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,10 @@
 		2E62FC6C1C28201700396CBC /* ResponseChainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseChainView.m; sourceTree = "<group>"; };
 		2E62FC721C28213000396CBC /* RootTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTableViewController.h; sourceTree = "<group>"; };
 		2E62FC731C28213000396CBC /* RootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableViewController.m; sourceTree = "<group>"; };
+		2E69A3791C2A79E60096D4B7 /* CG_VS_CA_perfromBetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CG_VS_CA_perfromBetter.h; sourceTree = "<group>"; };
+		2E69A37A1C2A79E60096D4B7 /* CG_VS_CA_perfromBetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CG_VS_CA_perfromBetter.m; sourceTree = "<group>"; };
+		2E69A37C1C2A80500096D4B7 /* CG_VS_CA_bestPerform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CG_VS_CA_bestPerform.h; sourceTree = "<group>"; };
+		2E69A37D1C2A80500096D4B7 /* CG_VS_CA_bestPerform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CG_VS_CA_bestPerform.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,10 @@
 			children = (
 				2E200B8F1C295C7C0092D466 /* CG_VS_CA.h */,
 				2E200B901C295C7C0092D466 /* CG_VS_CA.m */,
+				2E69A3791C2A79E60096D4B7 /* CG_VS_CA_perfromBetter.h */,
+				2E69A37A1C2A79E60096D4B7 /* CG_VS_CA_perfromBetter.m */,
+				2E69A37C1C2A80500096D4B7 /* CG_VS_CA_bestPerform.h */,
+				2E69A37D1C2A80500096D4B7 /* CG_VS_CA_bestPerform.m */,
 			);
 			path = codePerform;
 			sourceTree = SOURCE_ROOT;
@@ -240,8 +250,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E69A37B1C2A79E60096D4B7 /* CG_VS_CA_perfromBetter.m in Sources */,
 				2E62FC711C28201700396CBC /* ResponseChainView.m in Sources */,
 				2E200B8A1C2926470092D466 /* TableViewControllerForTestInsturctMent.m in Sources */,
+				2E69A37E1C2A80500096D4B7 /* CG_VS_CA_bestPerform.m in Sources */,
 				2E62FC6E1C28201700396CBC /* CATransform3DForTestController.m in Sources */,
 				2E200B911C295C7C0092D466 /* CG_VS_CA.m in Sources */,
 				2E62FC4D1C281EA600396CBC /* AppDelegate.m in Sources */,
